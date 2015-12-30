@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Onehof</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render :partial => "home/host" %>
-<%= render :partial => "home/place" %>
-<%= render :partial => "home/time" %>
-<%= yield %>
+<%= render :partial => "home/modal/host" %>
+<br/>
+<%= render :partial => "home/modal/place" %>
+<br/>
+<%= render :partial => "home/modal/time" %>
 
 </body>
 </html>

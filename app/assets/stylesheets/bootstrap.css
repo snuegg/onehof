@@ -2962,6 +2962,7 @@ select[multiple].input-lg {
   }
   .form-inline .has-feedback .form-control-feedback {
     top: 0;
+    
   }
 }
 .form-horizontal .radio,
@@ -4022,6 +4023,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom: 1px solid #ddd;
 }
 .nav-tabs > li {
+  text-align : center; /*for center*/
   float: left;
   width : 25%;
   margin-bottom: -1px;
@@ -5904,6 +5906,7 @@ button.close {
 .modal-dialog {
   position: relative;
   width: auto;
+  height : 70%;
   margin: 10px;
 }
 .modal-content {
