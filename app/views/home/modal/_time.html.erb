@@ -1,5 +1,5 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" onclick=" $("#datepicker").datepicker();" style="width:100%" data-toggle="modal" data-target="#timeModal">
+<button type="button" class="btn btn-primary btn-lg" style="width:100%" data-toggle="modal" data-target="#timeModal">
   날짜 : 
 </button>
 
@@ -11,7 +11,6 @@
         <h4 class="modal-title" id="timeModalLabel">Modal title</h4>
       </div>
       <div class="modal-body">
-             
              <p>
               Date: <input type="text" id="datepicker" />
              </p>
@@ -23,3 +22,10 @@
     </div>
   </div>
 </div>
+<script>
+            alert('test');
+             $(document).ready(function() {
+              $("#datepicker").click(){
+              $("#datepicker").datepicker();
+             });
+</script>
