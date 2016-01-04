@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" style="width:100%" data-toggle="modal" data-target="#placeModal">
-  장소 : 
+<button id="placeBtn" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#placeModal" onclick="initPlaces();" style="width:100%">
+장소 :
 </button>
 
 <!-- Modal -->
@@ -9,19 +9,21 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="placeModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="placeModalLabel">장소 선택</h4>
       </div>
       <div class="modal-body">
-          	<div id="placeTagContainer" style="height:30px;">선택 지역 : </div>      
-      	    <div style="width:300px;height:200px;">지도가 있어야 하는 공간. 아래 버튼은 지도위로 잘 녹아들어야 함</div>
-		        <button onclick="togglePlace(1, this);">관악</button>
-		        <button onclick="togglePlace(2, this);">신촌</button>
-		        <button onclick="togglePlace(3, this);">홍대</button>
-		        <button onclick="togglePlace(4, this);">대학로</button>
+
+		<div id="placeTagContainer" style="height:30px;">선택 지역 : </div>      
+     
+      	<div style="width:300px;height:200px;">지도가 있어야 하는 공간. 아래 버튼은 지도위로 잘 녹아들어야 함</div>
+		<button onclick="togglePlace(1);">관악</button>
+		<button onclick="togglePlace(2);">신촌</button>
+		<button onclick="togglePlace(3);">홍대</button>
+		<button onclick="togglePlace(4);">대학로</button>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="commitPlaces();">검색</button>
       </div>
     </div>
   </div>
