@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg" style="width:100%" data-toggle="modal" data-target="#timeModal">
-  날짜 : 
+  날짜 : <div id="timeResult"></div>
 </button>
 
 <div class="modal fade" id="timeModal" tabindex="-1" role="dialog" aria-labelledby="timeModalLabel">
@@ -11,17 +11,19 @@
         <h4 class="modal-title" id="timeModalLabel">Modal title</h4>
       </div>
       <div class="modal-body">
-             <script>
-							 $(function() {
- 							 $("#datepicker1").datepicker();
-							 });
-						</script>
+             <script>$(function() {
+         					        $("#datepicker1").datepicker({});
+                       		$("#datepicker2").multiDatesPicker({});
+      							 });
+      							 </script>
 						<p>
 					  Date: <input type="text" id="datepicker1" />
-						 </p>   
+						 </p>
+						<div id="datepicker2"></div>
+						<button id="clear">clear</button>
    <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="Close-time">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="save-time">Save changes</button>
       </div>
     </div>
   </div>

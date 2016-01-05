@@ -1,9 +1,8 @@
 <!-- Button trigger modal -->
-<button id="hostBtn"  type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#hostModal" style="width:100%" >
-주최 :
+<button id="hostBtn"  type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#hostModal" onclick="initOrgs(-1);" style="width:100%" >
+주최 : <div id="hostResult"></div>
 </button>
 
-<!-- Modal -->
 <div class="modal fade" id="hostModal" tabindex="-1" role="dialog" aria-labelledby="hostModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -14,8 +13,13 @@
       <div class="modal-body">
 		<div id="hostTagContainer" style="height:30px;">선택한 주최들 : </div>
 
-		주최 : <input placeholder="주최 단체명을 입력하세요." id="orgInput"/> <button type="button" class="btn btn-primary" id="hostadd" onclick="addOrg($('#orgInput').val());">추가</button><br/>
-
+		<div class="input-group" style="width:80%;">
+			<input type="text" class="form-control" placeholder="주최 단체명을 입력하세요." id="orgInput">
+			<span class="input-group-btn" onclick="addOrg($('#orgInput').val());">
+				<button class="btn btn-default" type="button">포함</button>
+			</span>
+		</div>
+    
 		<div id="hostListContainer" style="width:80%;height:200px;">
 		이곳에는 서버에서 받아온 실시간 초성검색이 들어와야 합니다.
 		하지만 아직 안되징
@@ -24,7 +28,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="commitOrgs();">Save changes</button>
       </div>
     </div>
   </div>
