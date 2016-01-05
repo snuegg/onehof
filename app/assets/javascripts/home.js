@@ -202,10 +202,6 @@ $(document).ready(
 			$('#datepicker2').multiDatesPicker('resetDates');
 		});
 		$('#Close-time').click(function(){
-			alert(selectedTime[0][0]);
-			for(var i=0;selectedTime[i]!=null;i++){
-				$('#datepicker2').multiDatesPicker('resetDates');
-			}
 		});
 	}
 	);
