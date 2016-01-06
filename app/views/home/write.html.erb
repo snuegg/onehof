@@ -1,0 +1,73 @@
+<div class="page-header" style="text-align:center;">
+		<h2>장소 등록</h2>
+	</div>
+	
+	<form>
+
+		<div class="input-group">
+			<span class="input-group-addon" id="basic-addon1">종류</span>
+			
+			<select id="kind" class="selectpicker show-tick form-control" data-style="btn-info">
+				<option>일일호프</option>
+				<option>주점</option>
+				<option>공연</option>
+				<option>축제</option>
+			</select>
+			<!-- input type="text" class="form-control" placeholder="주최를 입력하세요." aria-describedby="basic-addon1"-->
+		</div>
+
+		<div class="input-group">
+			<span class="input-group-addon" id="basic-addon1">주최</span>
+			<button id="hostBtn"  type="button" class="btn btn-primary" data-toggle="modal" data-target="#hostModal" style="margin-bottom:1px;width:100%" onclick="initOrgs(1);">
+				<div id="hostResult">클릭해주세요</div>
+			</button>
+			<!-- input type="text" class="form-control" placeholder="주최를 입력하세요." aria-describedby="basic-addon1"-->
+		</div>
+
+		<div class="input-group">
+			<span class="input-group-addon" id="basic-addon1">장소</span>
+			<button id="placeBtn"  type="button" class="btn btn-primary" data-toggle="modal" data-target="#placeModal" style="margin-bottom:1px;width:100%" onclick="initPlaces(1);">
+				<div id="placeResult">클릭해주세요</div>
+			</button>
+			<!-- input type="text" class="form-control" placeholder="주최를 입력하세요." aria-describedby="basic-addon1"-->
+		</div>
+
+		<div class="input-group">
+			<span class="input-group-addon" id="basic-addon1">시간</span>
+			<button id="timeBtn"  type="button" class="btn btn-primary" data-toggle="modal" data-target="#timeModal" style="margin-bottom:1px;width:100%" onclick="">
+				<div id="timeResult">클릭해주세요</div>
+			</button>
+			<!-- input type="text" class="form-control" placeholder="주최를 입력하세요." aria-describedby="basic-addon1"-->
+		</div>
+
+		<div class="input-group">
+			<span class="input-group-addon" id="basic-addon1">작성자</span>
+			<input type="text" id="owner" class="form-control" placeholder="작성자를 입력하세요." aria-describedby="basic-addon1">
+			<span class="input-group-addon" id="basic-addon1">글 비밀번호</span>
+			<input type="password" id="pw" class="form-control" placeholder="글 비밀번호를 입력하세요." aria-describedby="basic-addon1">
+		</div>
+
+		<div class="input-group">
+			<span class="input-group-addon" id="basic-addon1">타이틀</span>
+			<input type="text" id="title" class="form-control" placeholder="타이틀을 입력하세요." aria-describedby="basic-addon1">
+		</div>
+
+		<div class="input-group" style="height:300px;width:100%">
+			<input type="text" id="contents" class="form-control" placeholder="내용을 입력하세요." aria-describedby="basic-addon1" style="height:300px;width:100%">
+		</div>
+
+		<div class="input-group">
+			<span class="input-group-addon" id="basic-addon1">요약</span>
+			<input type="text" id="summary" class="form-control" placeholder="미리보기에 나올 요약을 입력하세요." aria-describedby="basic-addon1">
+		</div>
+
+		<div id="footer" style="background:#EEE;">
+			<button type="button" class="btn" onclick="location.href='${context_url}/'" style="float:left;">
+				돌아가기
+			</button>
+			<button type="button" class="btn" onclick="regist('${context_url}/event','${context_url}/')" style="float:right;">
+				등록 요청
+			</button>
+		</div>
+
+	</form>

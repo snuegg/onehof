@@ -15,4 +15,10 @@ class HomeController < ApplicationController
     def festival
     end
     
+    def write
+    end
+    
+    def cert
+    end
+    
 end

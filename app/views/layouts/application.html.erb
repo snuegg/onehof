@@ -2,10 +2,41 @@
 <html>
 <head>
   <title>Onehof</title>
- 
- <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+
+<link href="/assets/bootstrap-modal-bs3patch.css?body=1" media="all" rel="stylesheet" />
+<link href="/assets/bootstrap-modal.css?body=1" media="all" rel="stylesheet" />
+<link href="/assets/bootstrap-theme.css?body=1" media="all" rel="stylesheet" />
+<link href="/stylesheets/bootstrap-theme.css.map.css" media="all" rel="stylesheet" />
+<link href="/assets/bootstrap.css?body=1" media="all" rel="stylesheet" />
+<link href="/assets/home.css?body=1" media="all" rel="stylesheet" />
+<link href="/assets/jquery-ui.min.css?body=1" media="all" rel="stylesheet" />
+<link href="/assets/jquery-ui.structure.min.css?body=1" media="all" rel="stylesheet" />
+<link href="/assets/jquery-ui.theme.min.css?body=1" media="all" rel="stylesheet" />
+<link href="/assets/mdp.css?body=1" media="all" rel="stylesheet" />
+<link href="/assets/pepper-ginder-custom.css?body=1" media="all" rel="stylesheet" />
+<link href="/assets/prettify.css?body=1" media="all" rel="stylesheet" />
+<link href="/assets/write.css?body=1" media="all" rel="stylesheet" />
+<link href="/assets/application.css?body=1" media="all" rel="stylesheet" />
+
+<script src="/assets/jquery.js?body=1"></script>
+<script src="/assets/jquery_ujs.js?body=1"></script>
+<script src="/assets/turbolinks.js?body=1"></script>
+<script src="/assets/bootstrap-modal.js?body=1"></script>
+<script src="/assets/bootstrap-modalmanager.js?body=1"></script>
+<script src="/assets/bootstrap.js?body=1"></script>
+<script src="/assets/home.js?body=1"></script>
+<script src="/assets/jquery-ui.js?body=1"></script>
+<script src="/assets/jquery-ui.multidatespicker.js?body=1"></script>
+<script src="/assets/moment.js?body=1"></script>
+<script src="/assets/write.js?body=1"></script>
+<script src="/assets/application.js?body=1"></script>
+
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="kNHwsoCLn5PszXERSQ4tZXmGNSvUca1G+fQLZDxFieY=" name="csrf-token" />
+
+  <!--%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <!--%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!--%= csrf_meta_tags %-->
 
 
 </head>
@@ -13,6 +44,15 @@
 <%= render :partial => "layouts/logo" %>
 <%= render :partial => "layouts/nav" %>
 <%= yield %>
+<div id="footer" style="background:#EEE;">
+<button type="button" class="btn" style="float:right;"><a href="/home/write" >
+		글 쓰기</a>
+	</button>
+	
+<button type="button" class="btn" style="float:left;"><a href="/home/cert" >
+		허가하기</a>
+	</button>
+</div>
 
 
 </body>

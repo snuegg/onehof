@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get "home/jujum"
   get "home/dong"
   get "home/festival"
+  get "home/write"
+  get "home/cert"
   root 'home#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
