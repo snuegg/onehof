@@ -187,18 +187,42 @@ function displayPlace(index){
 
 }
 /************************ 시간 *****************************/
-var selectedTime;
+var gselectedTime;
+var gtimeNum = 0;
+var timeNumMax = 0;
+function initTimes(p_timeNumMax){
+	timeNumMax = p_timeNumMax;
+	$('#datepicker2').multiDatesPicker('resetDates');
+	if(gtimeNum > 0)	$('#datepicker2').multiDatesPicker({addDates: gselectedTime});
+}
+
 $(document).ready(
 	function(){
-		$('#save-time').click(function(){
-			selectedTime = null;
-			$('#timeResult').empty();
-			selectedTime = $('#datepicker2').multiDatesPicker('getDates',"string");
-			$('#timeResult').append(selectedTime);
+		$('#timebutton').click(function(){
+			initTimes(-1);	
 		});
-		$('#clear').click(function(){
-			selectedTime = null;
+		$('#save-time').click(function(){
+			gselectedTime = $('#datepicker2').multiDatesPicker('getDates',"object");
+			gtimeNum = gselectedTime.length;
+						
+			// 출력 지정
 			$('#timeResult').empty();
+			var first = 0;
+			for(var i=0;i<gtimeNum;i++){
+				var time = (gselectedTime[i].getMonth()+1)+'/'+gselectedTime[i].getDate();
+				if(first == 0){
+					first = 1;
+					$("#timeResult").text($("#timeResult").text() + time);
+				}
+				else{
+					$("#timeResult").text($("#timeResult").text() + ",  " + time);
+				}
+			}
+			
+			//search();
+		});
+
+		$('#clear').click(function(){
 			$('#datepicker2').multiDatesPicker('resetDates');
 		});
 		$('#Close-time').click(function(){

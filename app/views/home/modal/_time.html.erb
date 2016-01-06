@@ -1,5 +1,5 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" style="width:100%" data-toggle="modal" data-target="#timeModal">
+<button type="button" class="btn btn-primary btn-lg" style="width:100%" data-toggle="modal" data-target="#timeModal" id="timebutton">
   날짜 : <div id="timeResult"></div>
 </button>
 
@@ -12,13 +12,21 @@
       </div>
       <div class="modal-body">
              <script>$(function() {
-                        $("#datepicker1").datepicker({});
-                        $("#datepicker2").multiDatesPicker({});
+                        $("#datepicker2").multiDatesPicker({
+                          prevText: '이전 달',
+                          nextText: '다음 달',
+                          monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                          monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                          dayNames: ['일','월','화','수','목','금','토'],
+                          dayNamesShort: ['일','월','화','수','목','금','토'],
+                          dayNamesMin: ['일','월','화','수','목','금','토'],
+                          yearSuffix: '년'
+                        });
          					      
       							 });
       							 </script>
 						<p>
-					  Date: <input type="text" id="datepicker1" />
+					  기간설정: <input type="text" id="datepicker11" /> ~ <input type="text" id="datepicker12" />
 						 </p>
 						<div id="datepicker2"></div>
 						<button id="clear">clear</button>
