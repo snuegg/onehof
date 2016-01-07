@@ -21,4 +21,7 @@ class HomeController < ApplicationController
     def cert
     end
     
+    def testuser
+        render json: User.all
+    end
 end
