@@ -1,0 +1,10 @@
+.nav-tabs > li{
+    text-align : center; /*for center*/
+    width : 25%;
+}
+
+.nav-btn > li{
+    float: left;
+    text-align : center;
+    width : 33.333%;
+}

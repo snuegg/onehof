@@ -199,12 +199,12 @@ function initTimes(p_timeNumMax){
 $(document).ready(
 	function(){
 		$('#timebutton').click(function(){
-			initTimes(-1);	
+			initTimes(-1);
 		});
 		$('#save-time').click(function(){
+			gselectedTime = null;
 			gselectedTime = $('#datepicker2').multiDatesPicker('getDates',"object");
 			gtimeNum = gselectedTime.length;
-						
 			// 출력 지정
 			$('#timeResult').empty();
 			var first = 0;

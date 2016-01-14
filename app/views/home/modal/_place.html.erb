@@ -1,7 +1,4 @@
-<!-- Button trigger modal -->
-<button id="placeBtn" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#placeModal" onclick="initPlaces(-1);" style="width:100%">
-장소 : <div id="placeResult"></div>
-</button>
+
 
 <!-- Modal -->
 <div class="modal fade" id="placeModal" tabindex="-1" role="dialog" aria-labelledby="placeModalLabel">
@@ -16,10 +13,16 @@
 		<div id="placeTagContainer" style="height:30px;">선택 지역 : </div>      
      
       	<div style="width:300px;height:200px;">지도가 있어야 하는 공간. 아래 버튼은 지도위로 잘 녹아들어야 함</div>
-		<button onclick="togglePlace(1);">관악</button>
-		<button onclick="togglePlace(2);">신촌</button>
-		<button onclick="togglePlace(3);">홍대</button>
-		<button onclick="togglePlace(4);">대학로</button>
+      	
+        <img src="/assets/seoul.gif" alt="seoul.gif" usemap="#001" border="0">
+        <map id="imgmap2016114112751" name="001">
+          <area shape="poly" alt="" title="" coords="120,128,139,121,161,102,167,124,171,145,148,154,132,141" onclick="togglePlace(2)" target="" />
+          <area shape="poly" alt="" title="" coords="208,187,228,177,243,175,246,195,263,216,279,220,298,251,273,256,263,236,239,247,230,228,219,218,211,197" onclick="togglePlace(1)" target="" />
+        </map>
+    		<button onclick="togglePlace(1);">관악</button>
+    		<button onclick="togglePlace(2);">신촌</button>
+    		<button onclick="togglePlace(3);">홍대</button>
+    		<button onclick="togglePlace(4);">대학로</button>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
